@@ -8,7 +8,7 @@ import {
   TouchableWithoutFeedback,
 } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { Ionicons } from "@expo/vector-icons"; // Import Ionicons or any other icon library you prefer
+import { Ionicons } from "@expo/vector-icons";
 import Header from "../component/Header";
 
 const RegistrationScreen = ({ navigation }) => {
@@ -109,15 +109,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   button: {
-    width: "45%", // Adjust the width as needed
-    backgroundColor: "#444147", // Set button background color
-    borderRadius: 5, // Add border radius for rounded corners
-    paddingVertical: 10, // Add padding vertically
-    alignItems: "center", // Center content horizontally
+    width: "45%",
+    backgroundColor: "#444147",
+    borderRadius: 5,
+    paddingVertical: 10,
+    alignItems: "center",
   },
   buttonText: {
-    color: "#CDBBAD", // Set text color
-    fontSize: 16, // Set text font size
+    color: "#CDBBAD",
+    fontSize: 16,
   },
   input: {
     width: "75%",

@@ -8,19 +8,19 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { MaterialIcons } from "@expo/vector-icons"; // Assuming you're using Expo
-import Footer from "../component/footer"; // Import Footer component
+import { MaterialIcons } from "@expo/vector-icons";
+import Footer from "../component/footer";
 
 const Page1 = () => {
   const navigation = useNavigation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track menu open/close
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogout = () => {
     navigation.navigate("Home");
   };
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle menu state
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const handleProductPress = (productType) => {
@@ -75,8 +75,24 @@ const Page1 = () => {
     navigation.navigate("ProductDetails", { product });
   };
 
+  const navigateToAboutUs = () => {
+    navigation.navigate("About");
+  };
+
   const navigateToProfile = () => {
-    navigation.navigate("Profile"); // Navigating to the 'Profile' screen
+    navigation.navigate("Profile");
+  };
+
+  const navigateToCategory = () => {
+    navigation.navigate("Category");
+  };
+
+  const navigateToContactUs = () => {
+    navigation.navigate("Contact");
+  };
+
+  const navigateToSettings = () => {
+    navigation.navigate("Setting");
   };
 
   return (
@@ -130,36 +146,27 @@ const Page1 = () => {
 
         {isMenuOpen && (
           <View style={styles.menuContainer}>
-            <Button
-              title="Profile"
-              onPress={navigateToProfile}
-              color="#444147"
-            />{" "}
-            {/* Updated color */}
+            <Button title="Profile" onPress={navigateToProfile} color="black" />
             <Button
               title="Category"
-              onPress={() => console.log("Navigate to Category")}
-              color="#444147"
-            />{" "}
-            {/* Updated color */}
+              onPress={navigateToCategory}
+              color="black"
+            />
             <Button
               title="About Us"
-              onPress={() => console.log("Navigate to About Us")}
-              color="#444147"
-            />{" "}
-            {/* Updated color */}
+              onPress={navigateToAboutUs}
+              color="black"
+            />
             <Button
               title="Contact Us"
-              onPress={() => console.log("Navigate to Contact Us")}
-              color="#444147"
-            />{" "}
-            {/* Updated color */}
+              onPress={navigateToContactUs}
+              color="black"
+            />
             <Button
               title="Settings"
-              onPress={() => console.log("Navigate to Settings")}
-              color="#444147"
-            />{" "}
-            {/* Updated color */}
+              onPress={navigateToSettings}
+              color="black"
+            />
           </View>
         )}
       </View>
@@ -174,8 +181,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#CDBBAD",
-    alignItems: "center", // Center horizontally
-    justifyContent: "center", // Center vertically
+    alignItems: "center",
+    justifyContent: "center",
   },
   buttonContainer: {
     width: "40%",

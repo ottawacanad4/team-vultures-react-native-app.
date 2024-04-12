@@ -10,7 +10,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "../component/Header";
-import { FontAwesome5 } from "@expo/vector-icons"; // Import FontAwesome5 for password eye icon
+import { FontAwesome5 } from "@expo/vector-icons";
 
 const ForgotPasswordScreen = () => {
   const navigation = useNavigation();

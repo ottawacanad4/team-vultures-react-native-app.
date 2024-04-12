@@ -9,7 +9,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "../component/Header";
-import { FontAwesome5 } from "@expo/vector-icons"; // Changed import to FontAwesome5
+import { FontAwesome5 } from "@expo/vector-icons";
 
 const LoginPage = () => {
   const navigation = useNavigation();

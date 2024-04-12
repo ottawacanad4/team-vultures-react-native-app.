@@ -11,12 +11,15 @@ import Page1 from "./screens/page1";
 import Registration from "./screens/Registration";
 import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
 import ProductDetails from "./screens/ProductDetails";
-import CartPage from "./screens/CartPage"; // Import CartPage component
-import ProfileScreen from "./screens/ProfileScreen"; // Import ProfileScreen component
-import CartTotal from "./screens/CartTotal"; // Import CartTotal component
+import CartPage from "./screens/CartPage";
+import ProfileScreen from "./screens/ProfileScreen";
+import CartTotal from "./screens/CartTotal";
+import AboutScreen from "./screens/AboutScreen";
+import ContactScreen from "./screens/ContactScreen";
+import CategoryScreen from "./screens/CategoryScreen";
+import SettingScreen from "./screens/SettingScreen";
 
 const Stack = createStackNavigator();
-const Drawer = createDrawerNavigator();
 
 const StackNavigator = () => (
   <Stack.Navigator
@@ -59,36 +62,49 @@ const StackNavigator = () => (
     />
     <Stack.Screen
       name="CartPage"
-      component={CartPage} // Add CartPage screen
+      component={CartPage}
       options={{ title: "Cart Page" }}
     />
     <Stack.Screen
-      name="TotalCart" // Rename the screen to TotalCart
-      component={CartTotal} // Use the CartTotal component for TotalCart
-      options={{ title: "Total Cart" }} // Update the title
+      name="TotalCart"
+      component={CartTotal}
+      options={{ title: "Total Cart" }}
     />
     <Stack.Screen
       name="Profile"
-      component={ProfileScreen} // Add ProfileScreen as a screen
-      options={{ title: "Profile" }} // Set the title of the screen if needed
+      component={ProfileScreen}
+      options={{ title: "Profile" }}
+    />
+    <Stack.Screen
+      name="About"
+      component={AboutScreen}
+      options={{ title: "About Us" }}
+    />
+    <Stack.Screen
+      name="Contact"
+      component={ContactScreen}
+      options={{ title: "Contact Us" }}
+    />
+
+    <Stack.Screen
+      name="Category"
+      component={CategoryScreen}
+      options={{ title: "Category" }}
+    />
+
+    <Stack.Screen
+      name="Setting"
+      component={SettingScreen}
+      options={{ title: "Setting" }}
     />
   </Stack.Navigator>
-);
-
-const DrawerNavigator = () => (
-  <Drawer.Navigator>
-  
-    <Drawer.Screen name="Home" component={StackNavigator} />
-    <Drawer.Screen name="LogOut" component={StackNavigator} />
-    {/* Add additional drawer screens here if needed */}
-  </Drawer.Navigator>
 );
 
 export default function App() {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <DrawerNavigator />
+        <StackNavigator />
       </NavigationContainer>
       <StatusBar style="auto" />
     </SafeAreaProvider>

@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, FlatList } from "react-native";
-import Footer from "../component/Footer"; // Import the Footer component
+import Footer from "../component/footer";
+
 
 const CartTotal = ({ navigation }) => {
   // Dummy cart items for demonstration

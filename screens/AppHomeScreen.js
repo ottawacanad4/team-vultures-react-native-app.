@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#444147",
     paddingVertical: 12,
     paddingHorizontal: 30,
-    borderRadius: 25, // Adjust the border radius to make the button rounded
+    borderRadius: 25,
   },
   loginText: {
     color: "#CDBBAD",

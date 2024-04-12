@@ -8,7 +8,7 @@ const ProductDetails = ({ route }) => {
 
   // Function to handle navigation to the cart page
   const handleProductTypePress = (selectedImage, product) => {
-    navigation.navigate("CartPage", { selectedImage, product }); // Pass selected product and image as parameters
+    navigation.navigate("CartPage", { selectedImage, product });
   };
 
   // Render different options based on product type
